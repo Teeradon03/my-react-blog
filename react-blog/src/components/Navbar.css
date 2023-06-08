@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    border-radius: 5px;
+}
+
+.logo{
+    margin-right: auto;
+    padding-left: 10px;
+    color: whitesmoke;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+a:hover{
+    color: aqua;
+}

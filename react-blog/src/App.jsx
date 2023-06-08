@@ -1,10 +1,12 @@
 import "./App.css";
 import Home from "./components/home";
 import About from "./components/About";
-import Blogs from "./components/Blog";
-import {BrowserRouter ,Routes, Route} from "react-router-dom"
+import Blogs from "./components/Blogs";
+import {BrowserRouter ,Routes, Route, Navigate} from "react-router-dom"
 import Navbar from "./components/Navbar";
 import NotFound from "./components/NotFound";
+import Details from "./components/Details";
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +16,9 @@ function App() {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/blogs" element={<Blogs/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
+        <Route path="/home" element={<Navigate to="/" />}></Route>
+        <Route path="/info" element={<Navigate to="/about" />}></Route>
+        <Route path="/blog/:id" element={<Details/>}></Route>
       </Routes>
     </BrowserRouter>
   );
